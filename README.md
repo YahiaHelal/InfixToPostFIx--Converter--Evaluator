@@ -1,2 +1,3 @@
-# InfixToPostFIx--Converter--Evaluator
+# InfixToPostFix--Converter--Evaluator
 Java program to convert infix expression to postfix , evaluate given infix expression.
+the validations for the infix , postfix form may not be so accurate
