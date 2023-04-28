@@ -6,6 +6,7 @@ public class Evaluator {
 		int index = 0;
 		Stack<Double> evaluator = new Stack<>();
 		String wholeValue = "";
+		double result;
 		while(index < exp.length()) {
 			char current = exp.charAt(index);
 			if(Character.isDigit(current)) {
@@ -16,7 +17,11 @@ public class Evaluator {
 					wholeValue = "";
 				}
 			}else if(test.IsOperator(current)) {
-				double result = Calculate(evaluator.pop(),evaluator.pop(),current);
+				if(current == '-' && evaluator.size() == 1){
+				      result = evaluator.pop()*-1;
+				}else{
+				      result = Calculate(evaluator.pop(),evaluator.pop(),current);
+				}
 				evaluator.push(result);
 			}
 			index++;
